@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* AUTH BOX */
+.auth-box, .dashboard {
+  width: 350px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* HIDE DASHBOARD */
+.dashboard {
+  display: none;
+}
+
+/* TITLE */
+.auth-box h1 {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(90deg,#00f2fe,#4facfe);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.tabs .active {
+  opacity: 1;
+  border-bottom: 2px solid #00f2fe;
+}
+
+/* FORMS */
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form.active {
+  display: flex;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+button[type="submit"], #logoutBtn {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg,#00f2fe,#4facfe);
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#authStatus {
+  margin-top: 10px;
+  font-size: 13px;
+}
